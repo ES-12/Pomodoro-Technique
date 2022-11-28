@@ -15,8 +15,11 @@ h2 {
     font-size: 32px;
 }
 
+h3,
 p,
-li {
+li,
+.question,
+.answer {
     font-family: 'Anonymous Pro';
     font-size: 18px;
 }
@@ -132,4 +135,57 @@ h1 {
 
 #rules img {
     margin-right: 30px;
+}
+
+/* --------faq---------- */
+
+.faq {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(53, 53, 53);
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in;
+}
+
+.faq.active .answer {
+    max-height: 200px;
+    animation: fade 0.5s ease-in-out;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: (0px);
+    }
+}
+
+.faq-content {
+    background-color: #EDE7E5;
+    height: 400px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    margin: 20px;
 }
