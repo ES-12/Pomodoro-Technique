@@ -181,7 +181,6 @@ h1 {
 
 .faq-content {
     background-color: #EDE7E5;
-    height: 400px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
